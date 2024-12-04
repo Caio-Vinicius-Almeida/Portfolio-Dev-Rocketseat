@@ -1,0 +1,443 @@
+@import url(./reset.css);
+
+* {
+  box-sizing: border-box;
+  font-family: "Maven Pro", sans-serif;
+}
+
+:root {
+  /* Principal */
+  --red: #e3646e;
+  --purple: #bb72e9;
+  --blue: #3996db;
+  --green: #82bc4f;
+  --yellow: #eabd5f;
+  /* Base */
+  --gray-100: #0d0e11;
+  --gray-200: #16181d;
+  --gray-300: #292c34;
+  --gray-400: #878ea1;
+  --gray-500: #c0c4ce;
+  --gray-600: #e2e4e9;
+}
+
+#Intro {
+  display: flex;
+  padding: 7.5rem 10.1875rem 3.5625rem 10.1875rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5.875rem;
+  align-self: stretch;
+  background: url(../assets/Background_Intro.png) lightgray 50% / cover
+    no-repeat;
+
+  #Info {
+    display: flex;
+    width: 65rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    header {
+      display: flex;
+      width: 42.5rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 3.5rem;
+
+      .Avatar {
+        width: 7rem;
+        height: 7rem;
+
+        .User {
+          width: 6rem;
+          height: 6rem;
+          flex-shrink: 0;
+
+          img {
+            width: inherit;
+            height: inherit;
+            border-radius: 50%;
+            border: 0.1875rem solid var(--red);
+            padding: 0.5rem;
+            position: relative;
+          }
+        }
+
+        .code {
+          position: absolute;
+          right: 630px;
+          top: 180px;
+        }
+      }
+
+      .Text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+        align-self: stretch;
+
+        .Title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          align-self: stretch;
+
+          h3 {
+            color: var(--gray-500);
+            text-align: center;
+
+            /* Subtitle */
+            font-family: Inconsolata;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 120%; /* 24px */
+
+            strong {
+              color: var(--red);
+
+              /* Subtitle */
+              font-family: Inconsolata;
+              font-size: 1.25rem;
+              font-weight: 400;
+              line-height: 120%;
+            }
+          }
+
+          h1 {
+            color: var(--gray-600);
+            text-align: center;
+
+            /* Title Lg */
+            font-family: Asap;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 120%; /* 67.2px */
+          }
+
+          p {
+            color: var(--gray-400);
+            text-align: center;
+
+            /* Text Sm */
+            font-family: "Maven Pro";
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 140%; /* 19.6px */
+          }
+        }
+      }
+    }
+
+    #Tags {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+
+      .Tag {
+        display: flex;
+        padding: 0.5rem 1rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        p {
+          color: var(--gray-500);
+          text-align: center;
+
+          /* Text Md */
+          font-family: "Maven Pro";
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 140%; /* 22.4px */
+        }
+      }
+    }
+  }
+}
+
+#Projects {
+  display: flex;
+  padding: 4.5rem 7.5rem 9rem 7.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  align-self: stretch;
+  background: var(--gray-200);
+
+  header {
+    display: flex;
+    width: 65rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    h3 {
+      color: var(--red);
+      text-align: center;
+
+      /* Subtitle */
+      font-family: Inconsolata;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 120%; /* 24px */
+    }
+
+    h2 {
+      color: var(--gray-600);
+      text-align: center;
+
+      /* Title Md */
+      font-family: Asap;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 120%; /* 28.8px */
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+    padding: 1.25rem;
+    max-width: 75rem;
+    margin: 0 auto;
+
+    .ProjectCard {
+      display: flex;
+      width: 20.625rem;
+      height: 17.5rem;
+      padding: 0.75rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      flex-shrink: 0;
+      border-radius: 0.75rem;
+      background: var(--gray-300);
+      cursor: pointer;
+      transition: 0.35s;
+
+      img {
+        width: 19.125rem;
+        height: 9.75rem;
+        flex-shrink: 0;
+        border-radius: 0.5rem;
+        background: var(--gray-400);
+      }
+
+      .TextProjectCard {
+        display: flex;
+        padding: 0.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0.5rem;
+        align-self: stretch;
+
+        h3 {
+          color: var(--gray-600);
+
+          /* Title Sm */
+          font-family: Asap;
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 120%; /* 19.2px */
+        }
+
+        p {
+          color: var(--gray-500);
+
+          /* Text Sm */
+          font-family: "Maven Pro";
+          font-size: 0.875rem;
+          font-weight: 400;
+          line-height: 140%; /* 19.6px */
+        }
+      }
+
+      &:hover {
+        border-radius: 0.75rem;
+        border: 4px solid var(--gray-400);
+        background: var(--gray-300);
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+#Services {
+  display: flex;
+  padding: 5.5rem 7.5rem 7.5rem 7.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  align-self: stretch;
+  background: var(--gray-100);
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    h3 {
+      color: var(--red);
+      text-align: center;
+
+      /* Subtitle */
+      font-family: Inconsolata;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 120%; /* 24px */
+    }
+    h2 {
+      color: var(--gray-600);
+      text-align: center;
+
+      /* Title Md */
+      font-family: Asap;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 120%; /* 28.8px */
+    }
+  }
+
+  #GridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    align-items: center;
+    padding: 1.25rem;
+
+    .GridItens {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      align-self: stretch;
+
+      h3 {
+        color: var(--gray-600);
+
+        /* Title Sm */
+        font-family: Asap;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 120%; /* 19.2px */
+      }
+
+      span {
+        color: var(--gray-500);
+
+        /* Text Sm */
+        font-family: "Maven Pro";
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 140%; /* 19.6px */
+      }
+    }
+  }
+}
+
+#Contact {
+  display: flex;
+  padding: 8rem 7.5rem 12.5rem 7.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  align-self: stretch;
+  background: url(../assets/Background_Contacts.png) lightgray 50% / cover
+    no-repeat;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    h3 {
+      color: var(--purple);
+      text-align: center;
+
+      /* Subtitle */
+      font-family: Inconsolata;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 120%; /* 24px */
+    }
+
+    h2 {
+      color: var(--gray-600);
+      text-align: center;
+
+      /* Title Md */
+      font-family: Asap;
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 120%; /* 28.8px */
+    }
+
+    p {
+      color: var(--gray-500);
+      text-align: center;
+
+      /* Text Md */
+      font-family: "Maven Pro";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 140%; /* 22.4px */
+    }
+  }
+
+  #Links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .SocialButton {
+      display: flex;
+      width: 25rem;
+      padding: 1.25rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      transition: 0.35s ease;
+
+      border-radius: 0.5rem;
+      background: var(--gray-300);
+
+      &:hover {
+        border-radius: 0.5rem;
+        border: 0.125rem solid var(--blue);
+        background: var(--gray-300);
+        transform: scale(0.9);
+      }
+    }
+
+    .slot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+
+      a {
+        color: var(--gray-500);
+        font-family: "Maven Pro";
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 140%; /* 22.4px */
+      }
+    }
+  }
+}
