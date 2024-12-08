@@ -1,8 +1,11 @@
 @import url(./reset.css);
 
-* {
+*,
+body {
   box-sizing: border-box;
   font-family: "Maven Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
 }
 
 :root {
